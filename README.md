@@ -27,9 +27,11 @@ $$
 The other implements the more stable quadratic formula:
 
 $$
-    x_{1} = \frac{q}{a},\quad x_{2} = \frac{c}{q}
+    \displaystyle x_{1} = \frac{q}{a},\quad x_{2} = \frac{c}{q}
 $$
+
 where
+
 $$
     q = -\frac{1}{2}\left[b + \text{sgn}(b)\sqrt{b^{2} - 4ac}\right]
 $$
@@ -39,10 +41,13 @@ Name your header file `problem2.h` in the homework repository. Write a program `
 ## 3. Stability of a Recurrence Relation
 
 Verify that the "Golden mean":
+
 $$
     \phi \equiv \frac{\sqrt{5} - 1}{2} \approx 0.61803398
 $$
+
 satisfies the following recursion relation:
+
 $$
     \phi^{n+1} = \phi^{n-1} - \phi^{n}
 $$
