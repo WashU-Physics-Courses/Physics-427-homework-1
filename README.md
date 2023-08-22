@@ -20,32 +20,32 @@ Commit and push both `problem1.cpp` and `problem1.txt` to the homework repositor
 
 Write a C++ header that defines two functions. One that implements the usual quadratic formula that solves the algebraic equation $ax^{2} + bx + c = 0$:
 
-\[
+$$
     x_{1,2} = \frac{-b \pm\sqrt{b^{2} - 4ac}}{2a}.
-\]
+$$
 
 The other implements the more stable quadratic formula:
 
-\[
+$$
     x_{1} = \frac{q}{a},\quad x_{2} = \frac{c}{q}
-\]
+$$
 where
-\[
+$$
     q = -\frac{1}{2}\left[b + \text{sgn}(b)\sqrt{b^{2} - 4ac}\right]
-\]
+$$
 
 Name your header file `problem2.h` in the homework repository. Write a program `problem2.cpp` to test out these functions for a few different combinations of $(a, b, c)$ parameters. These should include least one example of $(a, b, c)$ that produce different results for these two implementations. Include the output in a separate text file `problem2.txt`. Commit and push both files to the homework repository.
 
 ## 3. Stability of a Recurrence Relation
 
 Verify that the "Golden mean":
-\[
+$$
     \phi \equiv \frac{\sqrt{5} - 1}{2} \approx 0.61803398
-\]
+$$
 satisfies the following recursion relation:
-\[
+$$
     \phi^{n+1} = \phi^{n-1} - \phi^{n}
-\]
+$$
 
 Use this recursion relation to write a simple function to calculate $\phi^{n}$
 for a given positive integer $n$. Print out $\phi^{n}$ for $n\in
