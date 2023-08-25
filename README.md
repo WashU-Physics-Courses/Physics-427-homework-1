@@ -69,6 +69,14 @@ Name your header file `problem2.h` in the homework repository. Write a program `
 1. At least one example of $(a, b, c)$ that produces no real solutions. Note what the output is.
 2. At least one example of $(a, b, c)$ that produces different results for these two implementations. 
 
+Organize your output as follows (replacing anything in square brackets with your numerical choices and results):
+
+``` markdown
+([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
+([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
+...
+```
+
 Include the output in a separate text file `problem2.txt`. Commit and push all 3 files to the homework repository. Remember to make sure that `problem2.txt` is the exact output of the program compiled from `problem2.cpp`.
 
 ## 3. Stability of a Recurrence Relation
@@ -85,6 +93,16 @@ $$
     \phi^{n+1} = \phi^{n-1} - \phi^{n}
 $$
 
-Use this recursion relation to write a simple function to calculate $\phi^{n}$ for a given positive integer $n$. Print out $\phi^{n}$ for $n\in [1,\dots,20]$. Do this for both `float` and `double` data types to see whether it stays stable for longer with double precision.
+Use this recursion relation to write a simple function to calculate $\phi^{n}$ for a given positive integer $n$. Print out $\phi^{n}$ for $n\in [1,\dots,20]$ and compare the result from the recursion relation with simply calculating the power using `std::pow(phi, n)`. Use double precision for all numbers. Organize your output like the following:
+
+``` markdown
+phi^1: [RESULT FROM RECURSION] vs [RESULT FROM POW]
+phi^2: [RESULT FROM RECURSION] vs [RESULT FROM POW]
+phi^3: [RESULT FROM RECURSION] vs [RESULT FROM POW]
+...
+phi^30: [RESULT FROM RECURSION] vs [RESULT FROM POW]
+```
+
+You should see that the first few results should be identical, but at some point the two numbers start to differ significantly. This is because the recursion relation is _unstable_. It has and alternative solution which is $-(\sqrt{5} + 1)/2$. Any rounding error will mix a small part of this alternative solution into the results, and this mixture will grow exponentially. Choosing a good algorithm is really important!
 
 Your source code should be written in `problem3.cpp`, and its output should be included in file `problem3.txt`. Commit and push both files to the homework repository.
