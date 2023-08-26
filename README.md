@@ -6,7 +6,7 @@ __Due 9:00am Monday 9/4/2023__
 
 In C++, you can access the machine precision for `float`, `double`, and `long double` types using the standard library function `std::numeric_limits<T>::epsilon()`, where `T` is one of the floating point types. In order to use this function, you need to include the `<limits>` header file.
 
-Write a simple C++ program to print this value for all of the three basic floating point types. Your output should look like this:
+Write a simple C++ program to print this value for all of the three basic floating point types. Your output should look like this (replacing anything in square brackets with your numerical choices and results):
 
 ``` markdown
 float epsilon: [SOME NUMBER]
@@ -67,13 +67,14 @@ std::cout << "x1 = " << std::get<0>(x) << ", x2 = " << std::get<1>(x) << std::en
 Name your header file `problem2.h` in the homework repository. Write a program `problem2.cpp` to test out these functions for a few different combinations of $(a, b, c)$ parameters. Include:
 
 1. At least one example of $(a, b, c)$ that produces no real solutions. Note what the output is.
+1. At least one example of $(a, b, c)$ that produces only one real solutions. Note what the output is.
 2. At least one example of $(a, b, c)$ that produces different results for these two implementations. 
 
 Organize your output as follows (replacing anything in square brackets with your numerical choices and results):
 
 ``` markdown
-([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
-([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
+Method [1 or 2]: ([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
+Method [1 or 2]: ([a], [b], [c]): x1 = [SOME NUMBER], x2 = [SOME NUMBER]
 ...
 ```
 
@@ -93,7 +94,7 @@ $$
     \phi^{n+1} = \phi^{n-1} - \phi^{n}
 $$
 
-Use this recursion relation to write a simple function to calculate $\phi^{n}$ for a given positive integer $n$. Print out $\phi^{n}$ for $n\in [1,\dots,20]$ and compare the result from the recursion relation with simply calculating the power using `std::pow(phi, n)`. Use double precision for all numbers. Organize your output like the following:
+Use this recursion relation to write a simple function to calculate $\phi^{n}$ for a given positive integer $n$. Print out $\phi^{n}$ for $n\in [1,\dots,30]$ and compare the result from the recursion relation with simply calculating the power using `std::pow(phi, n)`. Use double precision for all numbers. Organize your output like the following:
 
 ``` markdown
 phi^1: [RESULT FROM RECURSION] vs [RESULT FROM POW]
