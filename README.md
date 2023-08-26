@@ -56,6 +56,8 @@ $$
     q = -\frac{1}{2}\left[b + \text{sgn}(b)\sqrt{b^{2} - 4ac}\right]
 $$
 
+This way of solving the quadratic equation avoids the case when $b^2\gg 4ac$, hence $b$ and $\sqrt{b^2-4ac}$ are indistinguishable within numerical precision. Since $q$ does not involve the difference between two very close numbers, it behaves better for some combinations of coefficients.
+
 The `std::tuple<double, double>` type is a two-element tuple that contains two `double` numbers. This is the main way to return multiple results from a single function, since by default C++ only allows one return value. You'll need to include the header file `<tuple>`. You can create a tuple from two numbers `x1` and `x2` using the function `std::make_tuple(x1, x2)`.
 
 You can print the content of a tuple $x$ using the following line of code:
