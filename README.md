@@ -1,6 +1,8 @@
 # Physics 427 Homework 1
 
-__Due 9:00am Monday 9/4/2023__
+__Due 11:59pm Monday 9/4/2023__
+
+You can push to this repository as many times as you want until the deadline, after which the repository will automatically become read-only.
 
 ## 1. Machine Precision
 
